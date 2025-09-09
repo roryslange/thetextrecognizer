@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "kagglehub (>=0.3.13,<0.4.0)"
 ]
 
 [tool.poetry]
@@ -17,3 +18,6 @@ packages = [{include = "textrecognizer", from = "src"}]
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+hello = "textrecognizer.hello.main:hello"
