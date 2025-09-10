@@ -3,3 +3,10 @@ __pycache__
 
 # vscode
 .vscode/
+
+# intellij
+.idea/
+
+# mac
+.DS_Store
+
