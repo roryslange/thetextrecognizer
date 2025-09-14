@@ -4,4 +4,5 @@ import pandas as pd
 def dataframeFromCsv():
     path = download()
     df = pd.read_csv(path)
-    print(df.head())
+    # print(df.head())
+    return df
