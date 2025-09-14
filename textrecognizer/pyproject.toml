@@ -24,3 +24,4 @@ build-backend = "poetry.core.masonry.api"
 [project.scripts]
 hello = "textrecognizer.hello.main:hello"
 mnistdownload = "textrecognizer.download_data.main:download"
+traintest = "textrecognizer.model.main:train"
