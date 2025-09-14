@@ -6,4 +6,4 @@ def train():
     testingNumRows = len(df) - trainingNumRows
     training = df[:trainingNumRows]
     testing = df[trainingNumRows:testingNumRows:]
-    print(f'training size (80%): {trainingNumRows}\ntesting size (20%): {testingNumRows}')
+    print(f'training size (80%): {trainingNumRows}\ntesting size (20%): {testingNumRows}\ntotal rows: {len(df)}')
