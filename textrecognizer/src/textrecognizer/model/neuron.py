@@ -8,7 +8,6 @@ class Neuron:
         self.weights = weights
         self.bias = bias
 
-
     """
     Basically what we want to do here is (x1 * i1) + ... + (xN * iN) + b
     where x is a weight, i is an input, and b is the bias
