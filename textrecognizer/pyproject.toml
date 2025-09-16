@@ -23,6 +23,5 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [project.scripts]
-hello = "textrecognizer.hello.main:hello"
 mnistdownload = "textrecognizer.download_data.main:download"
 traintest = "textrecognizer.model.main:train"
