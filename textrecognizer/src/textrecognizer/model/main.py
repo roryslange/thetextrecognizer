@@ -1,4 +1,5 @@
 from .dataBuilder import dataframeFromCsv
+from .neuron import one_hot
 import numpy as np
 
 def train():
@@ -25,6 +26,10 @@ def train():
 
     W2 = np.random.standard_normal((10, 784)) - 0.5
     B2 = np.random.standard_normal((10, 1)) - 0.5
+
+    arr = np.array([1,4,5,2,3,4,2])
+    arr = arr.T
+    print(one_hot(arr))
 
 
 
