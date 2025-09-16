@@ -3,15 +3,16 @@ import numpy as np
 def sigmoid(val):
     return 1 / 1 + np.exp(-val)
 
-class Neuron:
-    def __init__(self, weights, bias):
-        self.weights = weights
-        self.bias = bias
+def softmax(val):
+    val_shift = val - np.max(val)
+    return np.exp(val_shift) / np.sum(val_shift)
 
-    """
-    Basically what we want to do here is (x1 * i1) + ... + (xN * iN) + b
-    where x is a weight, i is an input, and b is the bias
-    we then want to use sigmoid on it so it stays between 0 and 1
-    """
-    def feedForward(self, inputs):
-        return sigmoid(np.dot(self.weights, inputs) + self.bias)
+def relu(val):
+    return np.max(0, val)
+
+def forwardProp(W1, B1, W2, B2, X):
+    Z1 = W1.dot(X) + B1
+    A1 = relu(Z1)
+    Z2 = W2.dot(X) + B2
+    A2 = softmax(Z2)
+    return Z1, A1, Z2, A2

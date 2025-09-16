@@ -20,5 +20,13 @@ def train():
     Y_train = data_train[0]
     X_train = data_train[1:n]
 
+    W1 = np.random.standard_normal((10, 784)) - 0.5
+    B1 = np.random.standard_normal((10, 1)) - 0.5
+
+    W2 = np.random.standard_normal((10, 784)) - 0.5
+    B2 = np.random.standard_normal((10, 1)) - 0.5
+
+
+
 
 
