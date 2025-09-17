@@ -1,5 +1,5 @@
 from .dataBuilder import dataframeFromCsv
-from .neuron import one_hot
+from .neuron import one_hot, gradient_dissent
 import numpy as np
 
 def train():
@@ -16,20 +16,17 @@ def train():
     data_dev = data[0:1000].T
     Y_dev = data_dev[0]
     X_dev = data_dev[1:n]
+    X_dev = X_dev / 255
 
     data_train = data[1000:m].T
     Y_train = data_train[0]
     X_train = data_train[1:n]
+    X_train = X_train / 255
 
-    W1 = np.random.standard_normal((10, 784)) - 0.5
-    B1 = np.random.standard_normal((10, 1)) - 0.5
+    W1, B1, W2, B2 = gradient_dissent(X_train, Y_train, 100, 0.1)
 
-    W2 = np.random.standard_normal((10, 784)) - 0.5
-    B2 = np.random.standard_normal((10, 1)) - 0.5
 
-    arr = np.array([1,4,5,2,3,4,2])
-    arr = arr.T
-    print(one_hot(arr))
+
 
 
 
