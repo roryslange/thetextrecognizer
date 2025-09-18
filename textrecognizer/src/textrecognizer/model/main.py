@@ -16,14 +16,15 @@ def train():
     data_dev = data[0:1000].T
     Y_dev = data_dev[0]
     X_dev = data_dev[1:n]
-    X_dev = X_dev / 255
+    X_dev = X_dev / 255.
 
     data_train = data[1000:m].T
     Y_train = data_train[0]
     X_train = data_train[1:n]
-    X_train = X_train / 255
+    X_train = X_train / 255.
 
-    W1, B1, W2, B2 = gradient_dissent(X_train, Y_train, 100, 0.1)
+
+    W1, B1, W2, B2 = gradient_dissent(X_train, Y_train, 500, 0.1)
 
 
 
