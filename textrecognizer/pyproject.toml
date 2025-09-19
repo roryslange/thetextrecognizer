@@ -24,4 +24,5 @@ build-backend = "poetry.core.masonry.api"
 
 [project.scripts]
 mnistdownload = "textrecognizer.download_data.main:download"
-traintest = "textrecognizer.mnistMLP.main:train"
+mnistmlp = "textrecognizer.mnistMLP.main:train"
+improvedmnistmlp = "textrecognizer.improvedMnistMLP.main:train"
