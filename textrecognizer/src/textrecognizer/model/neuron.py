@@ -60,15 +60,20 @@ def gradient_dissent(X, Y, iterations, alpha):
         dW1, dB1, dW2, dB2 = backProp(X, Y, Z1, A1, Z2, A2, W2)
         # print(dW1.shape, dB1.shape, dW2.shape, dB2.shape)
         W1, B1, W2, B2 = update_params(W1, B1, W2, B2, dW1, dB1, dW2, dB2, alpha)
-        if (i % 15 == 0):
+        if (i % 5 == 0):
+            acc = accuracy(predictions(A2), Y)
             print(f'iteration: {i}')
-            print(f'accuracy: {accuracy(predictions(A2), Y)}')
+            print(f'accuracy: {acc}')
     return W1, B1, W2, B2
 
 def accuracy(predictions, Y):
-    print (predictions, Y)
-    print(np.min(predictions), np.max(predictions))
     return np.sum(predictions == Y) / Y.size
 
 def predictions(A2):
     return np.argmax(A2, 0)
+
+def test(X, Y, W1, B1, W2, B2):
+    _, _, _, A2 = forwardProp(W1, B1, W2, B2, X)
+    _predictions = predictions(A2)
+    print(f"accuracy on testing data: {accuracy(_predictions, Y) * 100} %")
+

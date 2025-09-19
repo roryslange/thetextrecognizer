@@ -1,5 +1,5 @@
 from .dataBuilder import dataframeFromCsv
-from .neuron import one_hot, gradient_dissent
+from .neuron import gradient_dissent, test
 import numpy as np
 
 def train():
@@ -23,8 +23,9 @@ def train():
     X_train = data_train[1:n]
     X_train = X_train / 255.
 
-
     W1, B1, W2, B2 = gradient_dissent(X_train, Y_train, 500, 0.1)
+
+    test(X_dev, Y_dev, W1, B1, W2, B2)
 
 
 
