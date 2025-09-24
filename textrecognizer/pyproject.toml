@@ -11,7 +11,8 @@ dependencies = [
     "kagglehub (>=0.3.13,<0.4.0)",
     "pandas (>=2.3.2,<3.0.0)",
     "pyarrow (>=21.0.0,<22.0.0)",
-    "numpy (>=2.3.3,<3.0.0)"
+    "numpy (>=2.3.3,<3.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)"
 ]
 
 [tool.poetry]
@@ -26,3 +27,4 @@ build-backend = "poetry.core.masonry.api"
 mnistdownload = "textrecognizer.download_data.main:download"
 mnistmlp = "textrecognizer.mnistMLP.main:train"
 improvedmnistmlp = "textrecognizer.improvedMnistMLP.main:train"
+mnistscikit = "textrecognizer.mnistSciKit.main:learn"
