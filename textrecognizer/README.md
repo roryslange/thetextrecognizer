@@ -9,4 +9,4 @@
 
 - `mnistmlp` - will run train function in main.py for mnistMLP, this is a simple MLP to classify digits in the MNIST dataset.
 - `improvedmnistmlp` - **incomplete** an improved model with more layers, neurons, and improved accuracy
-- `mnistpytorch` - implement the same mlp as i did with vector math, except using additional tools from pytorch
+- `mnistpytorch` - implement the same mlp as i did with vector math, except using additional tools from pytorch (args: `train` boolean: whether to train a new model or load the last trained one.)
